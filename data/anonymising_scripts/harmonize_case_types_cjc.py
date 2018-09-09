@@ -6,11 +6,10 @@ import pandas as pd
 
 
 # Define path to data
-path2data = './CJCCollab/data/original'
 
 # Load data
-case_cjc = pd.read_excel(os.path.join(path2data,'cjc_cases_bankruptcy.xlsx'))
-case_type_dic = pd.read_csv(os.path.join(path2data, 'case_type_harmonization.csv'))
+case_cjc = pd.read_excel('./CJCCollab/data/original/cjc_cases_bankruptcy.xlsx')
+case_type_dic = pd.read_csv('./CJCCollab/data/original/case_type_harmonization.csv')
 
 
 # Rename CJC Columns
@@ -57,5 +56,5 @@ case_cjc_harmonize['LEGAL_ISSUES'] = case_cjc_harmonize['LEGAL_ISSUES'].apply(re
 case_cjc_harmonize['ADVICE'] = case_cjc_harmonize['ADVICE'].apply(replace_newline)
 
 # Output file to data/original folder
-case_cjc_harmonize.to_csv(os.path.join(path2data, 'cjc_cases_20178_sample_20180808_harmonized.csv'), header=True, index=False)
+case_cjc_harmonize.to_csv('./CJCCollab/data/original/cjc_cases_bankruptcy_harmonized.csv'), header = True, index = False)
 
