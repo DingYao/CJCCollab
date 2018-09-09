@@ -9,7 +9,7 @@ import pandas as pd
 path2data = os.path.join('..', 'original')
 
 # Load data
-case_cjc = pd.read_excel(os.path.join(path2data,'cjc_cases_20178_sample_20180808.xlsx'))
+case_cjc = pd.read_excel(os.path.join(path2data,'cjc_cases_bankruptcy.xlsx'))
 case_type_dic = pd.read_csv(os.path.join(path2data, 'case_type_harmonization.csv'))
 
 
